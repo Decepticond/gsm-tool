@@ -1,3 +1,9 @@
+/*
+Aleksandr S 
+Some time in May
+
+*/
+
 use std::io;
 
 fn main() {
