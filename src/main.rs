@@ -7,10 +7,10 @@ XOR CL Tool
 use std::io;
 use indicatif::ProgressBar;
 
+
 fn main() {
     // Progress bar
     const N: u64 = 1 << 20;
-    progress_bar(N, "Default progress bar ");
     // Progress bar
 
     println!("Enter 2 binary values to XOR. \nE.g: ???? 10101010 10100101");
@@ -31,6 +31,7 @@ fn main() {
                 let result  = int1^int2;
                 let b_result = format!("{:b}", result);
                 println!("{}", b_result);
+                progress_bar(N, "Default progress bar ");
             } else {
                 println!("Incorrect syntax.");
             }
@@ -51,5 +52,5 @@ fn progress_bar(n: u64, _label: &str) {
     }
     pb.finish();
 
-    println!("Finished!");
+    println!("Operation complete");
 }
