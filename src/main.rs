@@ -1,7 +1,7 @@
 /*
 
 Aleksandr S 
-XOR CL Tool
+GSM Tools for nonspecific usecases
 
 */
 
