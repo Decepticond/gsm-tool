@@ -2,6 +2,7 @@
 
 Aleksandr S 
 XOR CL Tool from GSM-TOOL
+It's ok
 
 */
 use std::io;
