@@ -4,6 +4,9 @@
 Howdy and thanks for checking out `gsm-tool`. It's a set of commands made in rust aimed to aid furthered ethical education of GSM packet decoding, and cryptography in general.
 This project is currently still very WIP, as is my knowledge of GitHub in general :skull:.
 
+
+***This project has since been retired, all commands are being moved over crypt-tool***
+
 ### Installation [WIP] 
 **To install on MacOS/Linux, simply run:**
 
