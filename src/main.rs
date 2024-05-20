@@ -40,7 +40,7 @@ fn main() {
     match args.subcmd {
         Some(subcmd) => match subcmd {
             SubCommand::Xortool => xor_tool::xor_tool(),
-            SubCommand::Cmdlist => println!("Test output"),
+            SubCommand::Cmdlist => println!("{}", CMDLIST),
         },
         None => {
             println!("No targets given."); 
@@ -67,3 +67,14 @@ const WELCOME: &str = r" Welcome to the...
                 
                       GSM cmdline tool. 
 Run gsm-tool cmdlist for a list of subcommands and their descriptors.";
+
+
+const CMDLIST: &str = "List of subcommands.
+
+        [1] xortool
+             - usage: gsm-tool xortool <input1> <input2>
+        Description: Takes two binary inputs, XOR's them, and then prints the output.
+
+        [2] cmdlist
+            -usage: gsm-tool cmdlist
+        Description: Outputs a list of subcommands and their descriptors.";
