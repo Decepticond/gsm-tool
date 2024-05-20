@@ -81,5 +81,5 @@ then
     rustup component add clippy
 fi
 
-echo "Operatin finished. Run gsm-tool to get started."
+echo "Operation finished. Run gsm-tool to get started."
 
