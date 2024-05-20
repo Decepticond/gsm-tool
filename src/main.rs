@@ -27,13 +27,13 @@ enum SubCommand {
 fn main() {
     let args = Cmd::parse();
 
-match args.subcmd {
-    Some(subcmd) => match subcmd {
-        SubCommand::Xortool => xor_tool::xor_tool(),
-        SubCommand::Cmdlist => println!("Test output"),
-    },
-    None => {
-        println!("No targets given."); 
+    match args.subcmd {
+        Some(subcmd) => match subcmd {
+            SubCommand::Xortool => xor_tool::xor_tool(),
+            SubCommand::Cmdlist => println!("Test output"),
+        },
+        None => {
+            println!("No targets given."); 
+        }
     }
-}
 }
