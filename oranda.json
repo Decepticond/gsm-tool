@@ -1,0 +1,20 @@
+{
+    "project": {
+      "repository": "https://github.com/Lazaurus/gsm-tool"
+    },
+    "marketing": {
+      "analytics": {
+      }
+    },
+    "components": {
+      "artifacts": {
+        "auto": true,
+        "package_managers": {
+          "preferred": {
+            "macos/linux/unix": "curl -L https://raw.githubusercontent.com/gsm-tool/src/install.sh | bash",
+            "windows": "Start-BitsTransfer -Source https://raw.githubusercontent.com/gsm-tool/src/install.ps1 -Destination $env:TMP/install_gsm-tool.ps1; Unblock-File $env:TMP/install_gsm-tool.ps1; Invoke-Expression $env:TMP/install_gsm-tool.ps1"
+          }
+        }
+      }
+    }
+  }

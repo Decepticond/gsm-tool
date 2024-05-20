@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-echo -e "\nGSM tool pack"
+echo -e "\nGSM tool pack."
 
 echo "Checking requirements..."
 if [ -x "$(command  -v git)" ]
 then
     echo "SUCCESS: Git is installed."
 else
-    echo "ERROR: Git not installed. Install Git via your package manager, or: https://git-scm.com/."
+    echo "ERROR: Git not installed. Install Git via your package manager or at: https://git-scm.com/."
     exit 1
 fi
 
@@ -81,5 +81,5 @@ then
     rustup component add clippy
 fi
 
-echo "Finished. Run gsm-tool to get started."
+echo "Operatin finished. Run gsm-tool to get started."
 

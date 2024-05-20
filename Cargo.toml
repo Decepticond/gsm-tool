@@ -8,3 +8,8 @@ edition = "2021"
 
 [dependencies]
 indicatif = "0.17.8"
+clap = { version = "4.5.4", features = ["derive"] }
+
+[[bin]]
+name = "gsm-tool"
+path = "src/main.rs"
