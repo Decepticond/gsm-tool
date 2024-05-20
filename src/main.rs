@@ -31,42 +31,11 @@ enum SubCommand {
 }
 
 fn main() {
-    println!("    ...           ..       ...                    ...              .. 
-    ..              .     ...    ......         ...                .. 
-   ..                 .    ..          ...     ..                  .. 
-   ..                  ..   ..            ... ..                   .. 
-   ..                   ... ...             ....                   .. 
-   .                     ......               ..                   .. 
-   .                   ..........                                  .. 
-                      ............                                 .. 
-   .                                                               .. 
-   ..                                                              .. 
-   ..                                                              .. 
-    ..                                                            ..  
-     ..                                  .....''........         ..   
-      ..     ........''''''.             .,,,,,,'.   ..         ..    
-      ...    ...    .',,,,,..            .,,,,,,..    ..      ...     
-..........   ..     .',,,,'.            ..,,,,,,.     ..      ..  ..  
-... ....     ..     .',,,,'.             .',,,,'.      ..         ..  
-  ..         ..      .',,,'.              .',''.       .         .    
-   ...       ..       .....    ..           ..                ..      
-     ...                                           .....     ...      
-      .    ...                                      ..         ..     
-     .                         ...........                      ..    
-    ..                     .....                                 ..   
-   ...........                                        .......         
-              ......                                                  
-                 .......                        ..                    
-                   ..                            .                    
-                     ..                                               
-                      ..                                              
-                    ...                                               
-                    .....                            .                
-                       ..                            .                
-                      ..                              .               
-                      ..                               .              
-                      .                                .    \nWelcome to a GSM cmdline tool. Run gsm-tool cmdlist for a list of all subcommands and their descriptors.");
     let args = Cmd::parse();
+
+    if args.subcmd.is_none() {
+        println!("\n{WELCOME}\n");
+    }
 
     match args.subcmd {
         Some(subcmd) => match subcmd {
@@ -78,3 +47,23 @@ fn main() {
         }
     }
 }
+
+const WELCOME: &str = r" Welcome to the...
+              .;.       ,;        '.       .;.              
+              .ld,.     'xl.    .:c.     .'lc.            
+               :00Okdc,..oOo;,,;cd:...,;cldd;               
+               ,OX0xdxkk::xxl:;cdo;;llc::odo'               
+               .kNKxcccl,'lx;..;xl',;;;,cdxl.               
+                oXKkollc;.:xl::ld:.,:::coxx:                
+                .o0kddxoc;;:oddo:;;coooldxc.                
+                .;cdl;'';cc:;;;;:cc;'';loc;.                
+                .ll,coc.   ,llll,.  'lxo:oo.                
+                 :xl,;odc'.:dddd:.'lxxc:x0c                 
+                 'odo;,cddodddddddxko:lk0k,                 
+                 .ldddc,:odddddxxkxc:dOOOo.                 
+                  ,ldddo;,lddxxxkd:ck0Okd;                  
+                    .,:loc,cxkkkl:dkdc;..                   
+                        .',.;oo:';;.                     
+                
+                      GSM cmdline tool. 
+Run gsm-tool cmdlist for a list of subcommands and their descriptors.";
